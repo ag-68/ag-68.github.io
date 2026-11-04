@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@source "../index.html";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: #fafafa;
+    color: #09090b;
+  }
+
+  :focus-visible {
+    outline: 2px solid #fafafa;
+    outline-offset: 3px;
+  }
+
+  section,
+  footer {
+    scroll-margin-top: 4.5rem;
+  }
+}
+
+@layer components {
+  .skip {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 50;
+    background: #fafafa;
+    color: #09090b;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+
+  .skip:focus {
+    top: 1rem;
+  }
+
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .flow-step {
+    position: relative;
+    border: 1px solid rgb(63 63 70 / 0.9);
+    background: rgb(24 24 27 / 0.85);
+    border-radius: 0.5rem;
+    padding: 0.8rem 0.85rem 0.9rem;
+  }
+
+  .flow-step.is-gate {
+    border-color: rgb(253 230 138 / 0.35);
+    background: rgb(253 230 138 / 0.04);
+  }
+
+  .flow-k {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #a1a1aa;
+  }
+
+  .flow-step.is-gate .flow-k {
+    color: #fde68a;
+  }
+
+  .flow-t {
+    margin-top: 0.35rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #fafafa;
+    letter-spacing: -0.01em;
+  }
+
+  .flow-d {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1.35;
+    color: #a1a1aa;
+  }
+
+  .flow-arrow-h,
+  .flow-arrow-v {
+    color: #a1a1aa;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    max-width: none;
+    pointer-events: none;
+  }
+
+  .flow-arrow-h {
+    display: none;
+  }
+
+  .flow-arrow-v {
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 22px;
+    left: 50%;
+    bottom: -1.7rem;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: 1100px) {
+    .flow {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 2.4rem;
+    }
+
+    .flow-step {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+
+    .flow-arrow-v {
+      display: none;
+    }
+
+    .flow-arrow-h {
+      display: block;
+      position: absolute;
+      width: 34px;
+      height: 14px;
+      right: -2.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
