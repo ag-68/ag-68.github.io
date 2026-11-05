@@ -164,7 +164,43 @@
                   <p class="flow-d">Demo booked</p>
                 </li>
               </ol>
-              <p class="mt-4 text-xs leading-relaxed text-zinc-500">High-stakes calls stay blocked until a person approves the write path.</p>
+              <p class="mt-4 text-xs leading-relaxed text-zinc-500">High-stakes calls stay blocked until a person approves the write path. Scoring and dial are separate gates.</p>
+            </figure>
+
+            <div class="mt-8">
+              <h4 class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">MLOps &amp; agentic governance</h4>
+              <p class="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-300 text-pretty">Local-first MLOps sits on that same path — dashboard tab and APIs, with the Cloud Run demo left view-only. A versioned prompt registry, file-store MLflow traces, and golden evals make qualification and post-call extract auditable. Judges are heuristics, not a second model. The point is evaluation, auditability, and blast-radius control for an agentic GTM workflow.</p>
+              <ul class="mt-5 divide-y divide-zinc-800 border-y border-zinc-800">
+                <li class="grid gap-1 py-3 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6">
+                  <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500">Prompt registry</p>
+                  <p class="text-sm leading-relaxed text-zinc-300">Versioned YAML for <span class="font-mono text-[12px] text-zinc-200">lead_scoring</span> and <span class="font-mono text-[12px] text-zinc-200">demo_extract</span>. Active version plus content hashes. Switch with <span class="font-mono text-[12px] text-zinc-200">ACTIVE_PROMPT_VERSION</span>.</p>
+                </li>
+                <li class="grid gap-1 py-3 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6">
+                  <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500">MLflow tracing</p>
+                  <p class="text-sm leading-relaxed text-zinc-300">File-store spans for qualification, scoring, demo extract, and eval runs. The in-app trace log shows latency, tokens, cost, and prompt hash.</p>
+                </li>
+                <li class="grid gap-1 py-3 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6">
+                  <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500">Golden lead evals</p>
+                  <p class="text-sm leading-relaxed text-zinc-300">Fixed quiz leads. The gate matches the live rule: Fortune 500 or ICP ≥ 90 is Selected. Default 3 passes. Mean score and range, gate votes, and heuristic judges for groundedness, gate accuracy, and tone. Run from the UI or CLI. Each run keeps a snapshot.</p>
+                </li>
+                <li class="grid gap-1 py-3 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6">
+                  <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500">Golden demo evals</p>
+                  <p class="text-sm leading-relaxed text-zinc-300">Simulated post-call transcript and summary fixtures for <span class="font-mono text-[12px] text-zinc-200">demo_extract</span>. Heuristic judges check booked versus not booked, and date tokens. Same multi-pass pattern and tabbed UI as the lead evals.</p>
+                </li>
+                <li class="grid gap-1 py-3 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6">
+                  <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500">HITL feedback</p>
+                  <p class="text-sm leading-relaxed text-zinc-300">Call, Claim, and Reject are logged as <span class="font-mono text-[12px] text-zinc-200">approve-handover-to-AI</span>, <span class="font-mono text-[12px] text-zinc-200">call-by-human</span>, and <span class="font-mono text-[12px] text-zinc-200">lead-call-rejected</span>, from the dashboard and from Slack.</p>
+                </li>
+                <li class="grid gap-1 py-3 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6">
+                  <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500">Guardrails</p>
+                  <p class="text-sm leading-relaxed text-zinc-300">Select and dial are separate. A Selected lead with no phone can still go to Slack for review. Dial stays blocked.</p>
+                </li>
+              </ul>
+            </div>
+
+            <figure class="mt-6 overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950">
+              <img src="assets/mlops-lead-voice.png" alt="Local MLOps tab showing a 3-pass golden lead eval: score range, gate votes, and heuristic groundedness, gate accuracy, and tone" class="w-full" width="1855" height="913">
+              <figcaption class="border-t border-zinc-800 px-4 py-3 text-xs leading-relaxed text-zinc-500">Local MLOps tab, lead eval report. Three passes per case. Code: <span class="font-mono">prompts/</span>, <span class="font-mono">evals/</span>, <span class="font-mono">backend/app/evals/</span>.</figcaption>
             </figure>
 
             <div class="mt-6 grid gap-4 border-t border-zinc-800 pt-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
@@ -174,6 +210,8 @@
                 <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">ElevenLabs Voice Agents</li>
                 <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">LLM Orchestration</li>
                 <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Slack HITL Gate</li>
+                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">MLflow file store</li>
+                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">YAML prompt registry</li>
                 <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Google Cloud Run</li>
                 <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Docker</li>
               </ul>
