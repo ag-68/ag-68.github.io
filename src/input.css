@@ -148,6 +148,49 @@
   }
 }
 
+.tab-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+  overflow-x: auto;
+  border-bottom: 1px solid rgb(39 39 42);
+  scrollbar-width: thin;
+}
+
+.tab {
+  flex: 0 0 auto;
+  margin-bottom: -1px;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: #a1a1aa;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tab.is-active {
+  color: #fafafa;
+  border-bottom-color: #fafafa;
+}
+
+.tab-panel {
+  margin-top: 2rem;
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+article[id],
+#research {
+  scroll-margin-top: 4.5rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
