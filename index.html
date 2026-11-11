@@ -48,10 +48,12 @@
   <header class="sticky top-0 z-20 border-b border-zinc-800/80 bg-zinc-950/85 backdrop-blur-md">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
       <a href="#top" class="shrink-0 font-mono text-xs tracking-[0.18em] text-zinc-300">AHG</a>
-      <nav aria-label="Page">
+      <nav class="site-nav" aria-label="Page">
         <ul class="flex flex-nowrap items-center justify-end gap-x-3 text-[13px] text-zinc-400 sm:gap-x-5 sm:text-sm">
           <li><a class="hover:text-zinc-100" href="#work">Work</a></li>
-          <li><a class="hover:text-zinc-100" href="#background">Background</a></li>
+          <li><a class="hover:text-zinc-100" href="#experience">Experience</a></li>
+          <li><a class="hover:text-zinc-100" href="#education">Education</a></li>
+          <li><a class="hover:text-zinc-100" href="#publications">Publications</a></li>
           <li><a class="hover:text-zinc-100" href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -103,13 +105,19 @@
       </div>
     </section>
 
-    <section id="work" class="border-b border-zinc-800" aria-labelledby="work-title">
-      <div class="mx-auto max-w-7xl px-6 py-16 sm:py-20">
-        <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">01 — Selected work</p>
-        <h2 id="work-title" class="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-balance">Selected work</h2>
-        <p class="mt-4 max-w-3xl text-base leading-relaxed text-zinc-400">Selected work across agentic pipelines, shipped AI products, applied AI, and wireless R&amp;D.</p>
-
-        <div class="work-tabs mt-10" data-work-tabs>
+    <section id="dossier" class="border-b border-zinc-800">
+      <div class="section-layout mx-auto max-w-7xl px-6 py-12 sm:py-16" data-section-tabs>
+        <div class="vtab-scroll" role="tablist" aria-orientation="vertical" aria-label="Sections">
+          <button type="button" class="vtab is-active" role="tab" id="vtab-work" aria-selected="true" aria-controls="work">Selected work</button>
+          <button type="button" class="vtab" role="tab" id="vtab-experience" aria-selected="false" aria-controls="experience" tabindex="-1">Experience</button>
+          <button type="button" class="vtab" role="tab" id="vtab-education" aria-selected="false" aria-controls="education" tabindex="-1">Education</button>
+          <button type="button" class="vtab" role="tab" id="vtab-publications" aria-selected="false" aria-controls="publications" tabindex="-1">Publications</button>
+        </div>
+        <div class="section-main">
+          <div id="work" class="vpanel" role="tabpanel" aria-labelledby="vtab-work">
+            <h2 id="work-title" class="max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-balance">Selected work</h2>
+            <p class="mt-4 max-w-3xl text-base leading-relaxed text-zinc-400">Selected work across agentic pipelines, shipped AI products, applied AI, and wireless R&amp;D.</p>
+            <div class="work-tabs mt-8" data-work-tabs>
           <div class="tab-scroll" role="tablist" aria-label="Selected work">
             <button type="button" class="tab is-active" role="tab" id="tab-mlops" aria-selected="true" aria-controls="panel-mlops">MLOps &amp; pipelines</button>
             <button type="button" class="tab" role="tab" id="tab-products" aria-selected="false" aria-controls="panel-products" tabindex="-1">Shipped AI systems</button>
@@ -490,66 +498,50 @@
             </div>
           </article>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="background" aria-labelledby="background-title">
-      <div class="mx-auto max-w-7xl px-6 py-16 sm:py-20">
-        <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">02 — Record</p>
-        <h2 id="background-title" class="mt-3 text-3xl font-semibold tracking-[-0.03em]">Experience, Education &amp; Publications</h2>
-
-        <div class="mt-10 divide-y divide-zinc-800 border-y border-zinc-800">
-          <article class="grid gap-3 py-8 md:grid-cols-12 md:gap-8">
-            <div class="md:col-span-4">
-              <p class="font-mono text-xs text-zinc-400">2017 — Present</p>
-              <p class="mt-1 text-sm text-zinc-500">Stockholm</p>
+          </div>
+          </div>
+          <div id="experience" class="vpanel" role="tabpanel" aria-labelledby="vtab-experience" hidden>
+            <h2 class="text-3xl font-semibold tracking-[-0.03em]">Experience</h2>
+            <div class="mt-8 divide-y divide-zinc-800 border-y border-zinc-800">
+              <article class="grid gap-3 py-8 md:grid-cols-12 md:gap-8">
+                <div class="md:col-span-4">
+                  <p class="font-mono text-xs text-zinc-400">2017 — Present</p>
+                  <p class="mt-1 text-sm text-zinc-500">Stockholm</p>
+                </div>
+                <div class="md:col-span-8">
+                  <h3 class="text-lg font-medium tracking-[-0.01em]">Huawei Technologies Sweden AB</h3>
+                  <p class="mt-1 text-sm text-zinc-300">Principal Algorithm Research Engineer</p>
+                  <p class="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">5+ Gold Medal awards. Established and led 4 industry–academia research projects (1–2 years each), managing technical direction, budgets, export control, and IPR.</p>
+                </div>
+              </article>
+              <article class="grid gap-3 py-8 md:grid-cols-12 md:gap-8">
+                <div class="md:col-span-4">
+                  <p class="font-mono text-xs text-zinc-400">2014 — 2017</p>
+                  <p class="mt-1 text-sm text-zinc-500">Finland</p>
+                </div>
+                <div class="md:col-span-8">
+                  <h3 class="text-lg font-medium tracking-[-0.01em]">Tampere University</h3>
+                  <p class="mt-1 text-sm text-zinc-300">Postdoctoral Researcher</p>
+                  <p class="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">Massive MIMO and low-resolution quantized transceivers.</p>
+                </div>
+              </article>
             </div>
-            <div class="md:col-span-8">
-              <h3 class="text-lg font-medium tracking-[-0.01em]">Huawei Technologies Sweden AB</h3>
-              <p class="mt-1 text-sm text-zinc-300">Principal Algorithm Research Engineer</p>
-              <p class="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">5+ Gold Medal awards. Established and led 4 industry–academia research projects (1–2 years each), managing technical direction, budgets, export control, and IPR.</p>
-            </div>
-          </article>
-
-          <article class="grid gap-3 py-8 md:grid-cols-12 md:gap-8">
-            <div class="md:col-span-4">
-              <p class="font-mono text-xs text-zinc-400">2014 — 2017</p>
-              <p class="mt-1 text-sm text-zinc-500">Finland</p>
-            </div>
-            <div class="md:col-span-8">
-              <h3 class="text-lg font-medium tracking-[-0.01em]">Tampere University</h3>
-              <p class="mt-1 text-sm text-zinc-300">Postdoctoral Researcher</p>
-              <p class="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">Massive MIMO and low-resolution quantized transceivers.</p>
-            </div>
-          </article>
-
-          <article class="grid gap-3 py-8 md:grid-cols-12 md:gap-8">
-            <div class="md:col-span-4">
-              <p class="font-mono text-xs text-zinc-400">Education</p>
-            </div>
-            <div class="md:col-span-8">
-              <h3 class="text-lg font-medium tracking-[-0.01em]">Telecommunications &amp; electrical engineering</h3>
-              <ul class="mt-3 max-w-2xl space-y-3 text-sm leading-relaxed text-zinc-400">
-                <li><span class="text-zinc-200">Ph.D., Telecommunications Engineering</span> — Tampere University, 2010–2014</li>
-                <li><span class="text-zinc-200">M.Sc., Telecommunications Engineering</span> — Tampere University, 2007–2009</li>
-                <li><span class="text-zinc-200">B.Sc., Electrical &amp; Electronics Engineering</span> — Bilkent University, 2003–2007</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="grid gap-3 py-8 md:grid-cols-12 md:gap-8">
-            <div class="md:col-span-4">
-              <p class="font-mono text-xs text-zinc-400">Publications</p>
-            </div>
-            <div class="md:col-span-8">
-              <h3 class="text-lg font-medium tracking-[-0.01em]">IEEE journal &amp; conference record</h3>
-              <p class="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">~30 peer-reviewed IEEE journal and conference papers. More than 550 citations. H-index 13.</p>
-              <p class="mt-4">
-                <a class="text-sm text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://scholar.google.com/citations?user=lak6eWEAAAAJ&amp;hl=en" rel="me noopener noreferrer">Google Scholar</a>
-              </p>
-            </div>
-          </article>
+          </div>
+          <div id="education" class="vpanel" role="tabpanel" aria-labelledby="vtab-education" hidden>
+            <h2 class="text-3xl font-semibold tracking-[-0.03em]">Education</h2>
+            <ul class="mt-8 max-w-2xl divide-y divide-zinc-800 border-y border-zinc-800 text-sm leading-relaxed text-zinc-400">
+              <li class="py-5"><span class="text-zinc-200">Ph.D., Telecommunications Engineering</span> — Tampere University, 2010–2014</li>
+              <li class="py-5"><span class="text-zinc-200">M.Sc., Telecommunications Engineering</span> — Tampere University, 2007–2009</li>
+              <li class="py-5"><span class="text-zinc-200">B.Sc., Electrical &amp; Electronics Engineering</span> — Bilkent University, 2003–2007</li>
+            </ul>
+          </div>
+          <div id="publications" class="vpanel" role="tabpanel" aria-labelledby="vtab-publications" hidden>
+            <h2 class="text-3xl font-semibold tracking-[-0.03em]">Publications</h2>
+            <p class="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-400">~30 peer-reviewed IEEE journal and conference papers. More than 550 citations. H-index 13.</p>
+            <p class="mt-4">
+              <a class="text-sm text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://scholar.google.com/citations?user=lak6eWEAAAAJ&amp;hl=en" rel="me noopener noreferrer">Google Scholar</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -570,65 +562,92 @@
   </footer>
   <script>
     (function () {
-      var root = document.querySelector("[data-work-tabs]");
-      if (!root) return;
-      var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
-      var panels = Array.prototype.slice.call(root.querySelectorAll('[role="tabpanel"]'));
+      function bindTabs(root, rememberHash) {
+        if (!root) return null;
+        var tablist = root.querySelector(":scope > [role='tablist']");
+        if (!tablist) return null;
+        var tabs = Array.prototype.slice.call(tablist.querySelectorAll("[role='tab']"));
+        var panels = tabs.map(function (tab) {
+          return document.getElementById(tab.getAttribute("aria-controls"));
+        }).filter(Boolean);
+        var vertical = tablist.getAttribute("aria-orientation") === "vertical";
 
-      function select(id, focusTab) {
-        tabs.forEach(function (tab) {
-          var on = tab.id === id;
-          tab.classList.toggle("is-active", on);
-          tab.setAttribute("aria-selected", on ? "true" : "false");
-          tab.tabIndex = on ? 0 : -1;
-          if (on && focusTab) tab.focus();
-          if (on) tab.scrollIntoView({ inline: "nearest", block: "nearest" });
+        function select(id, focusTab) {
+          tabs.forEach(function (tab) {
+            var on = tab.id === id;
+            tab.classList.toggle("is-active", on);
+            tab.setAttribute("aria-selected", on ? "true" : "false");
+            tab.tabIndex = on ? 0 : -1;
+            if (on && focusTab) tab.focus();
+            if (on) tab.scrollIntoView({ inline: "nearest", block: "nearest" });
+          });
+          panels.forEach(function (panel) {
+            var on = panel.getAttribute("aria-labelledby") === id;
+            panel.classList.toggle("is-active", on);
+            if (on) panel.removeAttribute("hidden");
+            else panel.setAttribute("hidden", "");
+          });
+        }
+
+        function panelFor(el) {
+          var node = el;
+          while (node) {
+            if (node.getAttribute && node.getAttribute("role") === "tabpanel") {
+              var label = node.getAttribute("aria-labelledby");
+              if (tabs.some(function (tab) { return tab.id === label; })) return node;
+            }
+            node = node.parentElement;
+          }
+          return null;
+        }
+
+        tablist.addEventListener("click", function (event) {
+          var tab = event.target.closest("[role='tab']");
+          if (!tab || !tablist.contains(tab)) return;
+          select(tab.id, false);
+          if (!rememberHash) return;
+          var panel = document.getElementById(tab.getAttribute("aria-controls"));
+          if (panel && panel.id) history.replaceState(null, "", "#" + panel.id);
         });
-        panels.forEach(function (panel) {
-          var on = panel.getAttribute("aria-labelledby") === id;
-          panel.classList.toggle("is-active", on);
-          if (on) panel.removeAttribute("hidden");
-          else panel.setAttribute("hidden", "");
+
+        tablist.addEventListener("keydown", function (event) {
+          var tab = event.target.closest("[role='tab']");
+          if (!tab || !tablist.contains(tab)) return;
+          var index = tabs.indexOf(tab);
+          var next = null;
+          var prevKey = vertical ? "ArrowUp" : "ArrowLeft";
+          var nextKey = vertical ? "ArrowDown" : "ArrowRight";
+          if (event.key === nextKey) next = tabs[(index + 1) % tabs.length];
+          else if (event.key === prevKey) next = tabs[(index - 1 + tabs.length) % tabs.length];
+          else if (event.key === "Home") next = tabs[0];
+          else if (event.key === "End") next = tabs[tabs.length - 1];
+          else return;
+          event.preventDefault();
+          select(next.id, true);
+          if (rememberHash) {
+            var panel = document.getElementById(next.getAttribute("aria-controls"));
+            if (panel && panel.id) history.replaceState(null, "", "#" + panel.id);
+          }
         });
+
+        return { select: select, panelFor: panelFor };
       }
 
-      function panelForHash(hash) {
-        if (!hash || hash === "#") return null;
-        var el = document.getElementById(hash.slice(1));
-        if (!el) return null;
-        if (el.getAttribute("role") === "tabpanel" && root.contains(el)) return el;
-        var panel = el.closest('[role="tabpanel"]');
-        if (panel && root.contains(panel)) return panel;
-        return null;
-      }
+      var sections = bindTabs(document.querySelector("[data-section-tabs]"), true);
+      var work = bindTabs(document.querySelector("[data-work-tabs]"), false);
+      if (!sections && !work) return;
 
       function openHash() {
-        var panel = panelForHash(location.hash);
-        if (!panel) return;
-        select(panel.getAttribute("aria-labelledby"), false);
-        var target = document.getElementById(location.hash.slice(1));
-        if (target) target.scrollIntoView();
+        var id = (location.hash || "").slice(1);
+        if (id === "background") id = "experience";
+        var el = id ? document.getElementById(id) : null;
+        if (!el) return;
+        var sectionPanel = sections && sections.panelFor(el);
+        var workPanel = work && work.panelFor(el);
+        if (workPanel) work.select(workPanel.getAttribute("aria-labelledby"), false);
+        if (sectionPanel) sections.select(sectionPanel.getAttribute("aria-labelledby"), false);
+        if (sectionPanel || workPanel) el.scrollIntoView();
       }
-
-      root.addEventListener("click", function (event) {
-        var tab = event.target.closest('[role="tab"]');
-        if (!tab || !root.contains(tab)) return;
-        select(tab.id, false);
-      });
-
-      root.addEventListener("keydown", function (event) {
-        var tab = event.target.closest('[role="tab"]');
-        if (!tab || !root.contains(tab)) return;
-        var index = tabs.indexOf(tab);
-        var next = null;
-        if (event.key === "ArrowRight") next = tabs[(index + 1) % tabs.length];
-        else if (event.key === "ArrowLeft") next = tabs[(index - 1 + tabs.length) % tabs.length];
-        else if (event.key === "Home") next = tabs[0];
-        else if (event.key === "End") next = tabs[tabs.length - 1];
-        else return;
-        event.preventDefault();
-        select(next.id, true);
-      });
 
       window.addEventListener("hashchange", openHash);
       openHash();
