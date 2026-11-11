@@ -127,9 +127,17 @@
 
           <div id="panel-mlops" class="tab-panel is-active" role="tabpanel" aria-labelledby="tab-mlops">
           <article id="lead-voice" class="rounded-xl border border-zinc-800 bg-zinc-900/30 p-6 sm:p-8">
-            <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Project 01</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">Lead Voice Agent Ops</h3>
-            <p class="mt-1 text-sm text-zinc-400 text-balance">Autonomous Inbound GTM &amp; Voice Qualification Pipeline</p>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Project 01</p>
+                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">Lead Voice Agent Ops</h3>
+                <p class="mt-1 text-sm text-zinc-400 text-balance">Autonomous Inbound GTM &amp; Voice Qualification Pipeline</p>
+              </div>
+              <p class="flex shrink-0 gap-4 text-sm">
+                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://lead-voice-web-417710467872.europe-west1.run.app" rel="noopener noreferrer">Live demo</a>
+                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://github.com/ag-68/lead-voice-agent-ops" rel="noopener noreferrer">Source</a>
+              </p>
+            </div>
 
             <div class="mt-8 grid gap-8 md:grid-cols-2">
               <div>
@@ -214,31 +222,32 @@
               <p class="mt-4 text-xs leading-relaxed text-zinc-500">Code: <span class="font-mono">prompts/</span>, <span class="font-mono">evals/</span>, <span class="font-mono">backend/app/evals/</span>.</p>
             </div>
 
-            <div class="mt-6 grid gap-4 border-t border-zinc-800 pt-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-              <ul class="flex flex-wrap gap-2" aria-label="Tech stack">
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Python</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">FastAPI</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">ElevenLabs Voice Agents</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">LLM Orchestration</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Slack HITL Gate</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">MLflow file store</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">YAML prompt registry</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Google Cloud Run</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Docker</li>
-              </ul>
-              <p class="flex shrink-0 gap-4 text-sm">
-                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://lead-voice-web-417710467872.europe-west1.run.app" rel="noopener noreferrer">Live demo</a>
-                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://github.com/ag-68/lead-voice-agent-ops" rel="noopener noreferrer">Source</a>
-              </p>
-            </div>
+            <ul class="mt-6 flex flex-wrap gap-2 border-t border-zinc-800 pt-5" aria-label="Tech stack">
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Python</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">FastAPI</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">ElevenLabs Voice Agents</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">LLM Orchestration</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Slack HITL Gate</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">MLflow file store</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">YAML prompt registry</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Google Cloud Run</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Docker</li>
+            </ul>
           </article>
           </div>
 
           <div id="panel-products" class="tab-panel space-y-6" role="tabpanel" aria-labelledby="tab-products" hidden>
           <article id="dronigo" class="rounded-xl border border-zinc-800 bg-zinc-900/30 p-6 sm:p-8">
-            <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Project 02</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">Dronigo</h3>
-            <p class="mt-1 text-sm text-zinc-400 text-balance">3D Geospatial &amp; Automated AI Video Tour SaaS</p>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Project 02</p>
+                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">Dronigo</h3>
+                <p class="mt-1 text-sm text-zinc-400 text-balance">3D Geospatial &amp; Automated AI Video Tour SaaS</p>
+              </div>
+              <p class="shrink-0 text-sm">
+                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://www.dronigo.com" rel="noopener noreferrer">Live platform</a>
+              </p>
+            </div>
 
             <div class="mt-8 grid gap-8 md:grid-cols-2">
               <div>
@@ -290,26 +299,29 @@
               </ol>
             </figure>
 
-            <div class="mt-6 grid gap-4 border-t border-zinc-800 pt-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-              <ul class="flex flex-wrap gap-2" aria-label="Tech stack">
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Python</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Google Cloud Platform (GCP)</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Cesium / Google 3D Tiles</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">3D Camera Trajectory Synthesis</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">AI Video/Audio Pipelines</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Stripe/Payment Webhooks</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Auth</li>
-              </ul>
-              <p class="shrink-0 text-sm">
-                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://www.dronigo.com" rel="noopener noreferrer">Live platform</a>
-              </p>
-            </div>
+            <ul class="mt-6 flex flex-wrap gap-2 border-t border-zinc-800 pt-5" aria-label="Tech stack">
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Python</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Google Cloud Platform (GCP)</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Cesium / Google 3D Tiles</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">3D Camera Trajectory Synthesis</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">AI Video/Audio Pipelines</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Stripe/Payment Webhooks</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Auth</li>
+            </ul>
           </article>
 
           <article id="onmee" class="rounded-xl border border-zinc-800 bg-zinc-900/30 p-6 sm:p-8">
-            <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Project 03</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">OnMee</h3>
-            <p class="mt-1 text-sm text-zinc-400 text-balance">Universal Generative AI Virtual Try-On Platform</p>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Project 03</p>
+                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">OnMee</h3>
+                <p class="mt-1 text-sm text-zinc-400 text-balance">Universal Generative AI Virtual Try-On Platform</p>
+              </div>
+              <p class="flex shrink-0 gap-4 text-sm">
+                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://www.onmee.org" rel="noopener noreferrer">Website</a>
+                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://github.com/ag-68/OnMe" rel="noopener noreferrer">Source</a>
+              </p>
+            </div>
 
             <div class="mt-8 grid gap-8 md:grid-cols-2">
               <div>
@@ -361,18 +373,13 @@
               </ol>
             </figure>
 
-            <div class="mt-6 grid gap-4 border-t border-zinc-800 pt-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-              <ul class="flex flex-wrap gap-2" aria-label="Tech stack">
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Generative AI / Image Synthesis</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Python</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">GCP Back-Ends</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Chrome Extension &amp; Mobile</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Claude Code / Cursor</li>
-              </ul>
-              <p class="shrink-0 text-sm">
-                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://www.onmee.org" rel="noopener noreferrer">Website</a>
-              </p>
-            </div>
+            <ul class="mt-6 flex flex-wrap gap-2 border-t border-zinc-800 pt-5" aria-label="Tech stack">
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Generative AI / Image Synthesis</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Python</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">GCP Back-Ends</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Chrome Extension &amp; Mobile</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Claude Code / Cursor</li>
+            </ul>
           </article>
           </div>
 
@@ -435,9 +442,17 @@
 
           <div id="panel-applied" class="tab-panel" role="tabpanel" aria-labelledby="tab-applied" hidden>
           <article id="causal-orchestrator" class="rounded-xl border border-zinc-800 bg-zinc-900/30 p-6 sm:p-8">
-            <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Project 04</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">Closed-loop message orchestrator</h3>
-            <p class="mt-1 text-sm text-zinc-400 text-balance">Causal uplift under daily opt-out and channel caps</p>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Project 04</p>
+                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">Closed-loop message orchestrator</h3>
+                <p class="mt-1 text-sm text-zinc-400 text-balance">Causal uplift under daily opt-out and channel caps</p>
+              </div>
+              <p class="flex shrink-0 gap-4 text-sm">
+                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://ag-68.github.io/Causal_Decisioning_Multi_Objective_Orchestrator/" rel="noopener noreferrer">Live page</a>
+                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://github.com/ag-68/Causal_Decisioning_Multi_Objective_Orchestrator" rel="noopener noreferrer">Source</a>
+              </p>
+            </div>
 
             <div class="mt-8 grid gap-8 md:grid-cols-2">
               <div>
@@ -482,20 +497,14 @@
               </ol>
             </figure>
 
-            <div class="mt-6 grid gap-4 border-t border-zinc-800 pt-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-              <ul class="flex flex-wrap gap-2" aria-label="Tech stack">
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Python</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">scikit-learn</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">NumPy</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">FastAPI</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Hillstrom</li>
-                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Uplift / Qini</li>
-              </ul>
-              <p class="flex shrink-0 gap-4 text-sm">
-                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://ag-68.github.io/Causal_Decisioning_Multi_Objective_Orchestrator/" rel="noopener noreferrer">Live page</a>
-                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://github.com/ag-68/Causal_Decisioning_Multi_Objective_Orchestrator" rel="noopener noreferrer">Source</a>
-              </p>
-            </div>
+            <ul class="mt-6 flex flex-wrap gap-2 border-t border-zinc-800 pt-5" aria-label="Tech stack">
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Python</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">scikit-learn</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">NumPy</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">FastAPI</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Hillstrom</li>
+              <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Uplift / Qini</li>
+            </ul>
           </article>
           </div>
           </div>
