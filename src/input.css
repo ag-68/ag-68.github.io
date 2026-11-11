@@ -174,8 +174,8 @@
 }
 
 .tab.is-active {
-  color: #fafafa;
-  border-bottom-color: #fafafa;
+  color: #c7d2fe;
+  border-bottom-color: #818cf8;
 }
 
 .tab-panel {
@@ -235,8 +235,9 @@
 }
 
 .vtab.is-active {
-  color: #fafafa;
-  border-bottom-color: #fafafa;
+  color: #c7d2fe;
+  border-bottom-color: #818cf8;
+  background: rgb(129 140 248 / 0.08);
 }
 
 @media (min-width: 800px) {
@@ -264,8 +265,12 @@
 
   .vtab.is-active {
     border-bottom-color: transparent;
-    border-right-color: #fafafa;
+    border-right-color: #818cf8;
   }
+}
+
+.sub {
+  color: #a5b4fc;
 }
 
 article[id],
