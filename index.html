@@ -107,12 +107,13 @@
       <div class="mx-auto max-w-7xl px-6 py-16 sm:py-20">
         <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">01 — Selected work</p>
         <h2 id="work-title" class="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-balance">Selected work</h2>
-        <p class="mt-4 max-w-3xl text-base leading-relaxed text-zinc-400">Selected work across agentic pipelines, shipped AI products, and wireless R&amp;D.</p>
+        <p class="mt-4 max-w-3xl text-base leading-relaxed text-zinc-400">Selected work across agentic pipelines, shipped AI products, applied AI, and wireless R&amp;D.</p>
 
         <div class="work-tabs mt-10" data-work-tabs>
           <div class="tab-scroll" role="tablist" aria-label="Selected work">
             <button type="button" class="tab is-active" role="tab" id="tab-mlops" aria-selected="true" aria-controls="panel-mlops">MLOps &amp; pipelines</button>
             <button type="button" class="tab" role="tab" id="tab-products" aria-selected="false" aria-controls="panel-products" tabindex="-1">Shipped AI systems</button>
+            <button type="button" class="tab" role="tab" id="tab-applied" aria-selected="false" aria-controls="panel-applied" tabindex="-1">Applied AI</button>
             <button type="button" class="tab" role="tab" id="tab-wireless" aria-selected="false" aria-controls="panel-wireless" tabindex="-1">Wireless &amp; DSP</button>
           </div>
 
@@ -422,6 +423,72 @@
             </div>
           </article>
             </div>
+          </div>
+
+          <div id="panel-applied" class="tab-panel" role="tabpanel" aria-labelledby="tab-applied" hidden>
+          <article id="causal-orchestrator" class="rounded-xl border border-zinc-800 bg-zinc-900/30 p-6 sm:p-8">
+            <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Project 04</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">Closed-loop message orchestrator</h3>
+            <p class="mt-1 text-sm text-zinc-400 text-balance">Causal uplift under daily opt-out and channel caps</p>
+
+            <div class="mt-8 grid gap-8 md:grid-cols-2">
+              <div>
+                <h4 class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">The problem</h4>
+                <p class="mt-3 text-sm leading-relaxed text-zinc-300 text-pretty">A shop, a music app, or a delivery app can send a push, an email, a short in-app clip, or nothing. Ranking by the raw chance of a buy spends loud notes on people who would have bought anyway, and it raises the number who say stop.</p>
+              </div>
+              <div>
+                <h4 class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Architecture &amp; guardrails</h4>
+                <p class="mt-3 text-sm leading-relaxed text-zinc-300 text-pretty">Each morning a T-learner scores the extra buy and the extra stop versus silence, for silence, email, push, and in-app audio. The note that is sent is the one with the best extra buy after an opt-out charge and a channel charge. Those charges move until the day’s predicted extra stops and channel shares sit on their caps, and the next morning starts from the charges it finished with. Fatigue carries forward. A smaller boosted-tree classifier can copy the charged rule without searching for a new charge. Prepared charts use histogram gradient-boosted trees on Hillstrom shopping cards. A support-vector machine and a small neural net are recorded alternatives.</p>
+              </div>
+            </div>
+
+            <figure class="mt-8 rounded-lg border border-zinc-800 bg-zinc-950/70 p-4 sm:p-5">
+              <figcaption class="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">One morning</figcaption>
+              <ol class="flow mt-4" aria-label="Closed-loop message orchestrator">
+                <li class="flow-step">
+                  <p class="flow-k">01 · Score</p>
+                  <p class="flow-t">Extra vs silence</p>
+                  <p class="flow-d">Buy and stop, per channel</p>
+                  <svg class="flow-arrow-h" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8H31M25 2l8 6-8 6"/></svg>
+                  <svg class="flow-arrow-v" viewBox="0 0 16 40" aria-hidden="true"><path d="M8 1V31M2 25l6 8 6-8"/></svg>
+                </li>
+                <li class="flow-step is-gate">
+                  <p class="flow-k">02 · Charge</p>
+                  <p class="flow-t">Daily caps</p>
+                  <p class="flow-d">Opt-out and channel share</p>
+                  <svg class="flow-arrow-h" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8H31M25 2l8 6-8 6"/></svg>
+                  <svg class="flow-arrow-v" viewBox="0 0 16 40" aria-hidden="true"><path d="M8 1V31M2 25l6 8 6-8"/></svg>
+                </li>
+                <li class="flow-step">
+                  <p class="flow-k">03 · Assign</p>
+                  <p class="flow-t">One note</p>
+                  <p class="flow-d">Silence if nothing clears</p>
+                  <svg class="flow-arrow-h" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8H31M25 2l8 6-8 6"/></svg>
+                  <svg class="flow-arrow-v" viewBox="0 0 16 40" aria-hidden="true"><path d="M8 1V31M2 25l6 8 6-8"/></svg>
+                </li>
+                <li class="flow-step">
+                  <p class="flow-k">04 · Carry</p>
+                  <p class="flow-t">Next morning</p>
+                  <p class="flow-d">Fatigue and yesterday’s charges</p>
+                </li>
+              </ol>
+            </figure>
+
+            <div class="mt-6 grid gap-4 border-t border-zinc-800 pt-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+              <ul class="flex flex-wrap gap-2" aria-label="Tech stack">
+                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Python</li>
+                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">scikit-learn</li>
+                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">NumPy</li>
+                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">FastAPI</li>
+                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Hillstrom</li>
+                <li class="rounded border border-zinc-800 bg-zinc-950 px-2 py-1 font-mono text-[11px] text-zinc-300">Uplift / Qini</li>
+              </ul>
+              <p class="flex shrink-0 gap-4 text-sm">
+                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://ag-68.github.io/Causal_Decisioning_Multi_Objective_Orchestrator/" rel="noopener noreferrer">Live page</a>
+                <a class="text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-200" href="https://github.com/ag-68/Causal_Decisioning_Multi_Objective_Orchestrator" rel="noopener noreferrer">Source</a>
+              </p>
+            </div>
+          </article>
           </div>
         </div>
       </div>
